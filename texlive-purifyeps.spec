@@ -6,7 +6,7 @@
 # catalog-version 1.0a
 Name:		texlive-purifyeps
 Version:	1.0a
-Release:	1
+Release:	2
 Summary:	Make EPS work with both LaTeX/dvips and pdfLaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/purifyeps
