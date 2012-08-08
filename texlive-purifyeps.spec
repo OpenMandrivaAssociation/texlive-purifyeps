@@ -1,12 +1,12 @@
-# revision 20636
+# revision 26313
 # category Package
 # catalog-ctan /support/purifyeps
-# catalog-date 2009-03-25 09:03:02 +0100
+# catalog-date 2012-05-07 16:41:43 +0200
 # catalog-license lppl
-# catalog-version 1.0a
+# catalog-version 1.1
 Name:		texlive-purifyeps
-Version:	1.0a
-Release:	2
+Version:	1.1
+Release:	1
 Summary:	Make EPS work with both LaTeX/dvips and pdfLaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/purifyeps
