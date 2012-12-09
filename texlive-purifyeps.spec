@@ -61,3 +61,21 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+
+
+%changelog
+* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1-1
++ Revision: 812812
+- Update to latest release.
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-2
++ Revision: 755528
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-1
++ Revision: 719415
+- texlive-purifyeps
+- texlive-purifyeps
+- texlive-purifyeps
+- texlive-purifyeps
+
