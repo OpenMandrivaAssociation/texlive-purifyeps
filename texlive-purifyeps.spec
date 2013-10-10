@@ -1,4 +1,4 @@
-# revision 26313
+# revision 29725
 # category Package
 # catalog-ctan /support/purifyeps
 # catalog-date 2012-05-07 16:41:43 +0200
@@ -42,9 +42,9 @@ file into the same stylized format that MetaPost outputs.
 %files
 %{_bindir}/purifyeps
 %{_texmfdistdir}/scripts/purifyeps/purifyeps
-%doc %{_texmfdistdir}/doc/support/purifyeps/README
 %doc %{_mandir}/man1/purifyeps.1*
-%doc %{_texmfdir}/doc/man/man1/purifyeps.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/purifyeps.man1.pdf
+%doc %{_texmfdistdir}/doc/support/purifyeps/README
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,24 +58,6 @@ pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/purifyeps/purifyeps purifyeps
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1-1
-+ Revision: 812812
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-2
-+ Revision: 755528
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-1
-+ Revision: 719415
-- texlive-purifyeps
-- texlive-purifyeps
-- texlive-purifyeps
-- texlive-purifyeps
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
