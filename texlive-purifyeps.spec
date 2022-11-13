@@ -1,18 +1,12 @@
-# revision 29725
-# category Package
-# catalog-ctan /support/purifyeps
-# catalog-date 2012-05-07 16:41:43 +0200
-# catalog-license lppl
-# catalog-version 1.1
 Name:		texlive-purifyeps
-Version:	1.1
-Release:	10
+Version:	29725
+Release:	1
 Summary:	Make EPS work with both LaTeX/dvips and pdfLaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/purifyeps
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/purifyeps.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/purifyeps.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/purifyeps.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/purifyeps.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -31,12 +25,12 @@ directly. Hence, purifyeps need only convert an arbitrary EPS
 file into the same stylized format that MetaPost outputs.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -48,14 +42,14 @@ file into the same stylized format that MetaPost outputs.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/purifyeps/purifyeps purifyeps
+ln -sf %{_texmfdistdir}/scripts/purifyeps/purifyeps purifyeps
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
