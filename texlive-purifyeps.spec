@@ -3,7 +3,7 @@ Version:	29725
 Release:	2
 Summary:	Make EPS work with both LaTeX/dvips and pdfLaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/purifyeps
+URL:		https://www.ctan.org/tex-archive/support/purifyeps
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/purifyeps.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/purifyeps.doc.r%{version}.tar.xz
