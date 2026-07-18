@@ -1,5 +1,6 @@
 %global tl_name purifyeps
 %global tl_revision 79618
+%global tl_bin_links purifyeps:%{_texmfdistdir}/scripts/purifyeps/purifyeps
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -15,6 +16,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(purifyeps.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 While pdfLaTeX has a number of nice features, its primary shortcoming
